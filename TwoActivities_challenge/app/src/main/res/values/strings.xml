@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TwoActivities_challenge</string>
+    <string name="button_2_text">Send 2</string>
+    <string name="button_1_text">Send 1</string>
+    <string name="button_3_text">Send 3</string>
+    <string name="activity2_name">Second Activity</string>
+    <string name="text_header">Message Received from button 1 </string>
+    <string name="editText_main">Enter Your Message Here</string>
+</resources>

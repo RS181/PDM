@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/article_title"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_subtitle"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+
+                >
+
+            </TextView>
+
+            <!-- (OCORRE ESTE "ERRO" DE FORMATACAO NO BUTTON E TEXVIEW ABAIXO DEFINIDOS
+            Se :layout:layout_width ou height match_parent , faz com que
+             a formatação fico estranha (devido o vie pai
+             com a opção "match_parent") VER O QUE ACONTENCE
+             QUANDO COLOCAMOS TODOS OS layout_width e height COM "match_parent"PARA PERCEBER MELHOR  -->
+
+            <TextView
+                android:id="@+id/article"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingExtra="@dimen/line_spacing"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/article_text"
+                android:textSize="12sp"
+                tools:ignore="VisualLintLongText"></TextView>
+
+            <Button
+                android:id="@+id/comment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_botão"
+                android:backgroundTint="@color/button_color_1"
+                android:textColor="@color/black"
+                >
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+Projeto PDM (Anotações):
+
+Clientes podem comunicar entre si
+em vez de irmos ao servidor vamos buscar 
+
+Nao podemos usar linguagem node.js e php !!!
+
+Podemos usar Java(professor recomenda este, por ser mais simples) , rust  , ...
+
+Public cloud (fazer os itens dentro primeiro)
+
+a parte do http,... (fazer depois)
+
+
+Backend -> (10 de 20 valores)
+
+O  backend deve fazer a mudança de qualidade de video "ao vivo"
+
+
+mesh:
+
+podemos assumir um seeder por ficheiro 
+
+não ha qq tipo de firewall
