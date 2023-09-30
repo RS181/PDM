@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SimpleCalc</string>
+    <string name="type_operand_one_hint">valor_1</string>
+    <string name="type_operand_two_hint">valor 2</string>
+    <string name="add_operation_text">ADD\n</string>
+    <string name="sub_operation_text">SUB\n</string>
+    <string name="div_operation_text">DIV</string>
+    <string name="mul_operation_text">MUL</string>
+    <string name="computationError">Erro de computação\n</string>
+</resources>
