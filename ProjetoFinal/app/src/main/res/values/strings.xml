@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProjetoFinal</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="enter_a_password">Enter a Password</string>
+</resources>
