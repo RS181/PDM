@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+  ~ Copyright (C) 2018 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderActivity">
+    tools:context="com.example.droidcafeinput.OrderActivity">
 
     <TextView
         android:id="@+id/order_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:text="@string/order_text"
-        android:textSize="30sp"
+        android:text="@string/order_label_text"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,11 +39,10 @@
         android:id="@+id/name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginLeft="@dimen/margin_wide"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:text="@string/name_label_text"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_textview" />
 
@@ -33,12 +50,11 @@
         android:id="@+id/name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/enter_name_hint"
         android:inputType="textPersonName"
-        android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
         app:layout_constraintStart_toEndOf="@+id/name_label" />
 
@@ -46,9 +62,9 @@
         android:id="@+id/address_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginLeft="@dimen/margin_wide"
-        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="@string/address_label_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_label" />
@@ -57,38 +73,31 @@
         android:id="@+id/address_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
-        android:gravity="start|top"
         android:hint="@string/enter_address_hint"
         android:inputType="textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/address_label"
         app:layout_constraintStart_toEndOf="@+id/address_label" />
-    <!--
-    app:layout_constraintTop_toBottomOf="@+id/address_text"
 
-    Server para textview Phone estar sempre por baixo do address_text
-    que pode ocupar varias linhas
-    -->
     <TextView
         android:id="@+id/phone_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginLeft="@dimen/margin_wide"
-        android:layout_marginTop="@dimen/margin_wide"
-        android:text="Phone"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/phone_label_string"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/address_text" />
 
     <EditText
         android:id="@+id/phone_text"
-        android:layout_width="wrap_content"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/enter_phone_hint"
         android:inputType="phone"
@@ -99,27 +108,22 @@
         android:id="@+id/note_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginLeft="@dimen/margin_wide"
-        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="@string/note_label_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_label" />
 
-    <!--
-     android:inputType="textMultiLine|textCapSentences"
-     Combinação de diferentes input type's para uma Edittext
-    -->
     <EditText
         android:id="@+id/note_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
-        android:gravity="start|top"
         android:hint="@string/enter_note_hint"
-        android:inputType="textMultiLine|textCapSentences"
+        android:inputType="textCapSentences|textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/note_label"
         app:layout_constraintStart_toEndOf="@+id/note_label" />
 
@@ -127,9 +131,9 @@
         android:id="@+id/delivery_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
-        android:layout_marginLeft="@dimen/margin_wide"
-        android:layout_marginTop="@dimen/margin_wide"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="@string/choose_delivery_method"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,8 +142,8 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
-        android:checkedButton="@id/nextday"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/delivery_label">
@@ -149,15 +153,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:tag="pickup"
             android:text="@string/same_day_messenger_service" />
 
         <RadioButton
             android:id="@+id/nextday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:onClick="onRadioButtonClicked"
-            android:tag="nextday"
             android:text="@string/next_day_ground_delivery" />
 
         <RadioButton
@@ -165,7 +168,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
-            android:tag="pickup"
             android:text="@string/pick_up" />
     </RadioGroup>
 
@@ -173,13 +175,13 @@
         android:id="@+id/label_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_wide"
-        android:layout_marginRight="@dimen/margin_wide"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="@dimen/margin_wide"
-        app:layout_constraintTop_toBottomOf="@+id/address_text"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/phone_text"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/address_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
