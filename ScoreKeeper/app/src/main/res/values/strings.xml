@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="minus_button">Minus Button</string>
+    <string name="team1">Team1</string>
+    <string name="_0">0</string>
+    <string name="plus_button">Plus Button</string>
+    <string name="team2">Team2</string>
+    <string name="_0_v2">0</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="day_mode">Day Mode</string>
+</resources>
