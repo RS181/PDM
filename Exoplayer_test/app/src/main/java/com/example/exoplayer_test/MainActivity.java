@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     // private static final String VIDEO_SAMPLE = "tacoma_narrows";
 
     // Use this string for part 2 (load media from the internet).
+
+    Toast toast;
     private static final String VIDEO_SAMPLE =
             "http://35.195.14.2/video/testfile_1080p.json/master.m3u8 ";
 
@@ -70,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        toast = Toast.makeText(this,"Play...",Toast.LENGTH_SHORT);
+        toast.show();
         // Load the media each time onStart() is called.
         initializePlayer();
     }
@@ -78,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        Log.d("DEBUG","===>" + mVideoView.getCurrentPosition());
+
+        // Save the current playback position when the activity is paused.
+        mCurrentPosition = mVideoView.getCurrentPosition();
 
         // In Android versions less than N (7.0, API 24), onPause() is the
         // end of the visual lifecycle of the app.  Pausing the video here
@@ -87,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
         // This is not a problem for more recent versions of Android because
         // onStop() is now the end of the visual lifecycle, and that is where
         // most of the app teardown should take place.
+
+
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
             mVideoView.pause();
         }
@@ -95,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+
         // Media playback takes a lot of resources, so everything should be
         // stopped and released at this time.
         releasePlayer();
