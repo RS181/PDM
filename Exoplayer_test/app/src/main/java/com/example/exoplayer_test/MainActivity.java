@@ -20,6 +20,7 @@ import android.net.Uri;
 import android.os.Build;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.URLUtil;
 import android.widget.MediaController;
 import android.widget.TextView;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Use this string for part 2 (load media from the internet).
     private static final String VIDEO_SAMPLE =
-            "http://35.195.14.2/video/testfile_360p.json/master.m3u8 ";
+            "http://35.195.14.2/video/testfile_1080p.json/master.m3u8 ";
 
     private VideoView mVideoView;
     private TextView mBufferingTextView;
@@ -94,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         // Media playback takes a lot of resources, so everything should be
         // stopped and released at this time.
         releasePlayer();
